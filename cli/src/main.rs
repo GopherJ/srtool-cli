@@ -81,7 +81,8 @@ fn main() {
 				-e IMAGE={digest} \
 				-v {dir}:/build \
 				{cache_mount} \
-				{image}:{tag} build{app}{json}",
+				{image}:{tag} build{app}{json} \
+                --network=host",
 				package = build_opts.package,
 				dir = path.display(),
 				cache_mount = cache_mount,
